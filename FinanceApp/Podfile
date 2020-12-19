@@ -3,17 +3,19 @@
 
 target 'FinanceApp' do
   
-  pod 'Firebase/Analytics'
-   pod 'Firebase/Auth'
-   pod 'Firebase/Firestore'
-   pod 'RadarSDK', '~> 3.0.0'
-   pod 'Firebase/Database'
-
+   
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for FinanceApp
+  pod 'Firebase/Database'
+  pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Charts'
+  pod 'FirebaseUI'
 
+  
   target 'FinanceAppTests' do
     inherit! :search_paths
     # Pods for testing

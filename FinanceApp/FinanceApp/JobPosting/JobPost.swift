@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class JobPost: UIViewController {
 
@@ -36,7 +38,7 @@ class JobPost: UIViewController {
                 
                 "title": post,
                 "skills": necSkills,
-                "name": emplyName,
+                "name": employName,
                 "location": jobLocate,
                 "other": otherStuffZ,
                 "timestamp": [".sv": "timestamp"]
