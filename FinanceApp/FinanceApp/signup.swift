@@ -24,23 +24,32 @@ class signup: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        
         if let username = usernameTextField.text {
             
             if let password = passwordTextField.text {
                 
-                Auth.auth().signIn(withEmail: username, password: password) { (result, error) in
-                    
-                    if error != nil {
+                print ("Function passed")
+                      Auth.auth().createUser(withEmail: username, password: password) { (result, error) in
+                          if let error = error {
+                              print ("Failed to sign user up with error", error.localizedDescription)
+                                
+                              
+                              print ("Hello")
+                          }
+                              
+                          Auth.auth().signIn(withEmail: username, password: password) { (result, error) in
+                              if let error = error {
+                                  print ("Failed to sign up user with error message: ", error.localizedDescription)
+                                  
+                                  return
+                              }
+                              print ("Successfully logged user in...")
+                            
+                                  
+                                  
+                          }
                         
-                        self.errorMessage(title: "Login Error", message: error!.localizedDescription)
-    
-                    } else {
-                        
-                        self.performSegue(withIdentifier: "loginSegue", sender: self)
-                        
-                    }
-                    
+                          
                 }
                 
             }
@@ -50,14 +59,14 @@ class signup: UIViewController, UITextFieldDelegate {
         
         if posPicker.selectedSegmentIndex == 0 {
             
-            var values = ["email": emailLolz
+            var values = ["email": emailLolz, "type": "volunteer"
                 
                 
                 ]] as [String : Any]
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
-                Database.database().reference().child("volunteers").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
+                Database.database().reference().child("users").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
                     if let error = error {
                         print ("Failed to update database value with errors: ", error.localizedDescription)
                         
@@ -70,14 +79,14 @@ class signup: UIViewController, UITextFieldDelegate {
         }
         if posPicker.selectedSegmentIndex == 1 {
             
-            var values = ["email": emailLolz
+            var values = ["email": emailLolz, "type": "employee"
                 
                 
                 ]] as [String : Any]
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
-                Database.database().reference().child("employee").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
+                Database.database().reference().child("users").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
                     if let error = error {
                         print ("Failed to update database value with errors: ", error.localizedDescription)
                         
@@ -87,17 +96,18 @@ class signup: UIViewController, UITextFieldDelegate {
                 })
             }
             
+            
         }
         if posPicker.selectedSegmentIndex == 2 {
             
-            var values = ["email": emailLolz
+            var values = ["email": emailLolz, "type": "employer"
                 
                 
                 ]] as [String : Any]
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
-                Database.database().reference().child("employer").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
+                Database.database().reference().child("user").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
                     if let error = error {
                         print ("Failed to update database value with errors: ", error.localizedDescription)
                         
@@ -110,14 +120,14 @@ class signup: UIViewController, UITextFieldDelegate {
         }
         if posPicker.selectedSegmentIndex == 3 {
             
-            var values = ["email": emailLolz
+            var values = ["email": emailLolz, "type": "bank"
                 
                 
                 ]] as [String : Any]
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
-                Database.database().reference().child("bank").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
+                Database.database().reference().child("user").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
                     if let error = error {
                         print ("Failed to update database value with errors: ", error.localizedDescription)
                         
@@ -129,54 +139,8 @@ class signup: UIViewController, UITextFieldDelegate {
             
         }
         
-        
-        
-        
-        
-        
-        
-        
-        let uid = Auth.auth().currentUser?.uid
-        
-        
-        let  values = ["lastName": lastName.text, "name": firstName.text, "teamName": nameTeam.text, "school": school.text
-            ] as [String : Any]
-        
-        
-        
-        let ref = Database.database().reference()
-        ref.child("someid/" + String(uid!) + "/teamName").observeSingleEvent(of: .value) { (snapshot) in
-            guard let coachUID = snapshot.value as? String else { return }
-            Database.database().reference().child("coaches/" + coachUID + "/players").child(uid ?? " ").updateChildValues(values,withCompletionBlock: {(error, ref) in
-                        if let error = error {
-                            print ("Failed to update database value with errors: ", error.localizedDescription)
-                            DispatchQueue.main.async {
-                                let navController = UINavigationController(rootViewController: Homepage())
-                                
-                            }
-                            return
-                        }
-                        Database.database().reference().child("someid").child(String(uid!)).updateChildValues(values,withCompletionBlock: {(error, ref) in
-                            if let error = error {
-                                print ("Failed to update database value with errors: ", error.localizedDescription)
-                                DispatchQueue.main.async {
-                                    let navController = UINavigationController(rootViewController: Homepage())
-                                    
-                                }
-                                
-                            }
-                          
-                            
-                            
-                            
-                        })
-                }
-                
-                
-            )}
-        
-        
     }
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
