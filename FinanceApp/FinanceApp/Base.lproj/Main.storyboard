@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,13 +47,13 @@
         <!--Signup-->
         <scene sceneID="x2r-64-spK">
             <objects>
-                <viewController id="J2c-M4-B6a" customClass="signup" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="J2c-M4-B6a" customClass="signup" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Obn-Vz-Bjt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 4.png" translatesAutoresizingMaskIntoConstraints="NO" id="dS9-Vk-Xij">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="896" id="9Aj-mu-Tzx"/>
                                     <constraint firstAttribute="width" constant="414" id="MgS-aa-Pnp"/>
@@ -111,7 +111,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-lS-Abk">
-                                <rect key="frame" x="173" y="687" width="69" height="36"/>
+                                <rect key="frame" x="173" y="736" width="69" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="6YP-9d-eFx"/>
                                     <constraint firstAttribute="height" constant="36" id="tao-Gz-Flh"/>
@@ -141,7 +141,6 @@
                         <outlet property="posPicker" destination="rhg-iu-bLy" id="a86-7G-e33"/>
                         <outlet property="registerButton" destination="oLB-lS-Abk" id="8Oa-KI-0zN"/>
                         <outlet property="usernameTextField" destination="7Wt-Dp-Ex6" id="2LV-68-Jz6"/>
->>>>>>> f6a429fd12c2b86766448af1899ddc28c5a5a619
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FUK-aF-wTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,7 +150,7 @@
         <!--View Controller-->
         <scene sceneID="qhH-7C-471">
             <objects>
-                <viewController id="HfU-CG-qYe" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="HfU-CG-qYe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tp2-N4-uI2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +211,7 @@
         <!--Marketplace-->
         <scene sceneID="RoQ-8L-OhR">
             <objects>
-                <viewController id="SPN-B8-AGb" customClass="MapViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="SPN-B8-AGb" customClass="MapViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oHT-CS-BjU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +247,7 @@
         <!--Profile-->
         <scene sceneID="M3g-WH-gUl">
             <objects>
-                <viewController id="BwJ-Hw-3of" customClass="myProfile" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BwJ-Hw-3of" customClass="myProfile" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VlS-lB-fLA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -390,7 +389,7 @@
         <!--Apply-->
         <scene sceneID="Td7-Er-Zxy">
             <objects>
-                <viewController id="Obi-Ch-lZi" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="Obi-Ch-lZi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f8I-XI-rTB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -443,13 +442,13 @@
         <!--Edit Profile-->
         <scene sceneID="Hht-pa-0wD">
             <objects>
-                <viewController id="yef-5l-dSy" customClass="editProfile" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="yef-5l-dSy" customClass="editProfile" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7eJ-cV-e31">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 7.png" translatesAutoresizingMaskIntoConstraints="NO" id="va5-KR-s5n">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="896" id="Yld-fR-t0l"/>
                                     <constraint firstAttribute="width" constant="414" id="jJZ-8X-yeb"/>
@@ -581,7 +580,7 @@
         <!--View Controller-->
         <scene sceneID="Hul-gB-8OU">
             <objects>
-                <viewController id="Lv8-nn-YcR" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="Lv8-nn-YcR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqK-0k-UoD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -596,7 +595,7 @@
         <!--Employ-->
         <scene sceneID="xD8-gp-346">
             <objects>
-                <viewController id="ZX0-i4-PPZ" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="ZX0-i4-PPZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWp-N2-e8M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -646,7 +645,7 @@
         <!--Job Post-->
         <scene sceneID="fvw-q9-zvF">
             <objects>
-                <viewController id="QY1-Um-Ch4" customClass="JobPost" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="QY1-Um-Ch4" customClass="JobPost" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QeH-WI-yVK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -768,7 +767,7 @@
         <!--Loans-->
         <scene sceneID="Tbi-Mv-YO8">
             <objects>
-                <viewController id="K8i-Zs-BcN" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="K8i-Zs-BcN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Kn-Df-Tsn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -835,9 +834,9 @@
         <!--Home-->
         <scene sceneID="LaD-BK-h5b">
             <objects>
-                <viewController id="wGh-hi-3f0" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="wGh-hi-3f0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="33n-y1-qWj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Iip-Ke-cSG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -852,7 +851,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Yi9-ss-jtE">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1ez-Lg-Uf7" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="1ez-Lg-Uf7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yB0-uR-Kye">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -876,7 +875,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9He-iw-t0V"/>
+        <segue reference="cBV-8C-6Qy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
