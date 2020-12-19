@@ -17,6 +17,25 @@
 		5621F09D258D788100F6460A /* FinanceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621F09C258D788100F6460A /* FinanceAppUITests.swift */; };
 		5621F0D3258D7BBB00F6460A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5621F0D2258D7BBB00F6460A /* GoogleService-Info.plist */; };
 		7C454035FDA53BD4FB79EEE1 /* Pods_FinanceAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2CE1992ABAEFAA71DD9471 /* Pods_FinanceAppTests.framework */; };
+		A81A56FC258D85FC00A7F63C /* iPhone 11 Pro.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A56FB258D85FC00A7F63C /* iPhone 11 Pro.png */; };
+		A81A5701258D866000A7F63C /* iPhone 11 Copy 4.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A5700258D866000A7F63C /* iPhone 11 Copy 4.png */; };
+		A81A5706258D874F00A7F63C /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5705258D874F00A7F63C /* login.swift */; };
+		A81A570B258D876A00A7F63C /* homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A570A258D876A00A7F63C /* homepage.swift */; };
+		A81A5710258D878200A7F63C /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A570F258D878200A7F63C /* signup.swift */; };
+		A81A5715258D879300A7F63C /* map.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5714258D879300A7F63C /* map.swift */; };
+		A81A571A258D87AD00A7F63C /* crowdSourcePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5719258D87AD00A7F63C /* crowdSourcePost.swift */; };
+		A81A571F258D87BE00A7F63C /* crowdSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A571E258D87BE00A7F63C /* crowdSourceView.swift */; };
+		A81A5724258D87D900A7F63C /* crowdPostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5723258D87D900A7F63C /* crowdPostingView.swift */; };
+		A81A5729258D87ED00A7F63C /* JobPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5728258D87ED00A7F63C /* JobPost.swift */; };
+		A81A572E258D87FD00A7F63C /* JobPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A572D258D87FD00A7F63C /* JobPostView.swift */; };
+		A81A5733258D881300A7F63C /* JobRecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5732258D881300A7F63C /* JobRecView.swift */; };
+		A81A5738258D882800A7F63C /* MarketPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5737258D882800A7F63C /* MarketPost.swift */; };
+		A81A573D258D883600A7F63C /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A573C258D883600A7F63C /* MarketView.swift */; };
+		A81A5742258D884400A7F63C /* MarketPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5741258D884400A7F63C /* MarketPostView.swift */; };
+		A81A574D258D889D00A7F63C /* LoanPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A574C258D889D00A7F63C /* LoanPost.swift */; };
+		A81A5752258D88AD00A7F63C /* LoanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5751258D88AD00A7F63C /* LoanView.swift */; };
+		A81A5757258D88C000A7F63C /* LoanPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A5756258D88C000A7F63C /* LoanPostView.swift */; };
+		A81A575C258D88CD00A7F63C /* bankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A575B258D88CD00A7F63C /* bankView.swift */; };
 		D1937C37F6C6817BB419F46C /* Pods_FinanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6812DDD81433C4FC8B70A782 /* Pods_FinanceApp.framework */; };
 		D44D4EA7FB9CC14FB7F0E4FA /* Pods_FinanceApp_FinanceAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7B382E0DC12D5B59862267 /* Pods_FinanceApp_FinanceAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +79,25 @@
 		8B2CE1992ABAEFAA71DD9471 /* Pods_FinanceAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C15B058D6E23DC1AC5C6281 /* Pods-FinanceApp-FinanceAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp-FinanceAppUITests.release.xcconfig"; path = "Target Support Files/Pods-FinanceApp-FinanceAppUITests/Pods-FinanceApp-FinanceAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E4B7F59483FB8BBF0F27537 /* Pods-FinanceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp.release.xcconfig"; path = "Target Support Files/Pods-FinanceApp/Pods-FinanceApp.release.xcconfig"; sourceTree = "<group>"; };
+		A81A56FB258D85FC00A7F63C /* iPhone 11 Pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone 11 Pro.png"; sourceTree = "<group>"; };
+		A81A5700258D866000A7F63C /* iPhone 11 Copy 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone 11 Copy 4.png"; sourceTree = "<group>"; };
+		A81A5705258D874F00A7F63C /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		A81A570A258D876A00A7F63C /* homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepage.swift; sourceTree = "<group>"; };
+		A81A570F258D878200A7F63C /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
+		A81A5714258D879300A7F63C /* map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map.swift; sourceTree = "<group>"; };
+		A81A5719258D87AD00A7F63C /* crowdSourcePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crowdSourcePost.swift; sourceTree = "<group>"; };
+		A81A571E258D87BE00A7F63C /* crowdSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crowdSourceView.swift; sourceTree = "<group>"; };
+		A81A5723258D87D900A7F63C /* crowdPostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crowdPostingView.swift; sourceTree = "<group>"; };
+		A81A5728258D87ED00A7F63C /* JobPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPost.swift; sourceTree = "<group>"; };
+		A81A572D258D87FD00A7F63C /* JobPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostView.swift; sourceTree = "<group>"; };
+		A81A5732258D881300A7F63C /* JobRecView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRecView.swift; sourceTree = "<group>"; };
+		A81A5737258D882800A7F63C /* MarketPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPost.swift; sourceTree = "<group>"; };
+		A81A573C258D883600A7F63C /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
+		A81A5741258D884400A7F63C /* MarketPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPostView.swift; sourceTree = "<group>"; };
+		A81A574C258D889D00A7F63C /* LoanPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanPost.swift; sourceTree = SOURCE_ROOT; };
+		A81A5751258D88AD00A7F63C /* LoanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanView.swift; sourceTree = "<group>"; };
+		A81A5756258D88C000A7F63C /* LoanPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanPostView.swift; sourceTree = "<group>"; };
+		A81A575B258D88CD00A7F63C /* bankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankView.swift; sourceTree = "<group>"; };
 		B3200447DC46969E833ED736 /* Pods-FinanceApp-FinanceAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp-FinanceAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FinanceApp-FinanceAppUITests/Pods-FinanceApp-FinanceAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2DB64F9AF24D37DEE459C82 /* Pods-FinanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp.debug.xcconfig"; path = "Target Support Files/Pods-FinanceApp/Pods-FinanceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E37605A0ECF770B7D9920808 /* Pods-FinanceAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceAppTests.release.xcconfig"; path = "Target Support Files/Pods-FinanceAppTests/Pods-FinanceAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,10 +156,28 @@
 		5621F079258D787D00F6460A /* FinanceApp */ = {
 			isa = PBXGroup;
 			children = (
+				A81A574C258D889D00A7F63C /* LoanPost.swift */,
+				A81A5751258D88AD00A7F63C /* LoanView.swift */,
+				A81A5756258D88C000A7F63C /* LoanPostView.swift */,
+				A81A575B258D88CD00A7F63C /* bankView.swift */,
 				5621F07A258D787D00F6460A /* AppDelegate.swift */,
 				5621F07C258D787D00F6460A /* SceneDelegate.swift */,
 				5621F07E258D787D00F6460A /* ViewController.swift */,
 				5621F080258D787D00F6460A /* Main.storyboard */,
+				A81A570A258D876A00A7F63C /* homepage.swift */,
+				A81A570F258D878200A7F63C /* signup.swift */,
+				A81A5705258D874F00A7F63C /* login.swift */,
+				A81A5714258D879300A7F63C /* map.swift */,
+				A81A5719258D87AD00A7F63C /* crowdSourcePost.swift */,
+				A81A571E258D87BE00A7F63C /* crowdSourceView.swift */,
+				A81A5723258D87D900A7F63C /* crowdPostingView.swift */,
+				A81A5728258D87ED00A7F63C /* JobPost.swift */,
+				A81A572D258D87FD00A7F63C /* JobPostView.swift */,
+				A81A5732258D881300A7F63C /* JobRecView.swift */,
+				A81A5737258D882800A7F63C /* MarketPost.swift */,
+				A81A573C258D883600A7F63C /* MarketView.swift */,
+				A81A5741258D884400A7F63C /* MarketPostView.swift */,
+				A81A5746258D885700A7F63C /* images */,
 				5621F083258D788000F6460A /* Assets.xcassets */,
 				5621F085258D788000F6460A /* LaunchScreen.storyboard */,
 				5621F088258D788000F6460A /* Info.plist */,
@@ -156,6 +212,15 @@
 				8B2CE1992ABAEFAA71DD9471 /* Pods_FinanceAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A81A5746258D885700A7F63C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A81A5700258D866000A7F63C /* iPhone 11 Copy 4.png */,
+				A81A56FB258D85FC00A7F63C /* iPhone 11 Pro.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		C59C864403EB91DAF6AB83FE /* Pods */ = {
@@ -281,8 +346,10 @@
 			files = (
 				5621F087258D788000F6460A /* LaunchScreen.storyboard in Resources */,
 				5621F0D3258D7BBB00F6460A /* GoogleService-Info.plist in Resources */,
+				A81A56FC258D85FC00A7F63C /* iPhone 11 Pro.png in Resources */,
 				5621F084258D788000F6460A /* Assets.xcassets in Resources */,
 				5621F082258D787D00F6460A /* Main.storyboard in Resources */,
+				A81A5701258D866000A7F63C /* iPhone 11 Copy 4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,9 +477,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A81A5715258D879300A7F63C /* map.swift in Sources */,
 				5621F07F258D787D00F6460A /* ViewController.swift in Sources */,
+				A81A5752258D88AD00A7F63C /* LoanView.swift in Sources */,
 				5621F07B258D787D00F6460A /* AppDelegate.swift in Sources */,
 				5621F07D258D787D00F6460A /* SceneDelegate.swift in Sources */,
+				A81A5742258D884400A7F63C /* MarketPostView.swift in Sources */,
+				A81A572E258D87FD00A7F63C /* JobPostView.swift in Sources */,
+				A81A5757258D88C000A7F63C /* LoanPostView.swift in Sources */,
+				A81A5729258D87ED00A7F63C /* JobPost.swift in Sources */,
+				A81A5710258D878200A7F63C /* signup.swift in Sources */,
+				A81A570B258D876A00A7F63C /* homepage.swift in Sources */,
+				A81A571F258D87BE00A7F63C /* crowdSourceView.swift in Sources */,
+				A81A574D258D889D00A7F63C /* LoanPost.swift in Sources */,
+				A81A5738258D882800A7F63C /* MarketPost.swift in Sources */,
+				A81A5733258D881300A7F63C /* JobRecView.swift in Sources */,
+				A81A573D258D883600A7F63C /* MarketView.swift in Sources */,
+				A81A575C258D88CD00A7F63C /* bankView.swift in Sources */,
+				A81A5724258D87D900A7F63C /* crowdPostingView.swift in Sources */,
+				A81A571A258D87AD00A7F63C /* crowdSourcePost.swift in Sources */,
+				A81A5706258D874F00A7F63C /* login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
