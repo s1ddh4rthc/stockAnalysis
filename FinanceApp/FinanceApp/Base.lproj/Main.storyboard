@@ -16,13 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PPV-qV-NEq">
-                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPV-qV-NEq">
+                                <rect key="frame" x="87" y="166" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="Jz9-Ws-U39"/>
                                     <constraint firstAttribute="width" constant="240" id="yHJ-Th-dfE"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iZ-dI-MJo">
+                                <rect key="frame" x="188" y="526" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="HfU-CG-qYe" kind="show" id="Cak-me-PME"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USB-BR-Tqf">
+                                <rect key="frame" x="179" y="650" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="J2c-M4-B6a" kind="show" id="htI-7R-b8I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -197,6 +213,7 @@
                             <constraint firstItem="bJC-HL-vZe" firstAttribute="centerY" secondItem="8cV-dN-OJB" secondAttribute="centerY" id="LxO-qm-Q9J"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BhV-Cj-CdJ"/>
                     <connections>
                         <outlet property="passwordTextField" destination="EP7-dX-KDe" id="nSc-BL-Qgf"/>
                         <outlet property="usernameTextField" destination="6uf-oG-XQt" id="b5m-6f-p85"/>
