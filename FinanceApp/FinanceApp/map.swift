@@ -67,6 +67,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 else {
                     for document in QuerySnapshot!.documents {
                         //green hospital
+                        
+                        print(QuerySnapshot)
                         if let status = document.get("status") as? String {
                             if status == "secure" {
                                 self.green = true
@@ -130,7 +132,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 if let status = document.get("status") as? String {
                         print(status)
                         // green points
-                        if status == "delivered" {
+                        if status == "sent" {
                             print("im delivered")
                             self.green = true
                             if let geo = document.get("geolocation") as? [Double] {
@@ -146,7 +148,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                         }
 
                         //yellow points
-                        if status == "transit" {
+                        if status == "reserved" {
                             print("im in transit")
                             self.yellow = true
                             if let geo = document.get("geolocation") as? [Double] {
@@ -162,7 +164,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                         }
 
                         //red points
-                        if status == "requested" {
+                        if status == "available" {
                             self.red = true
                             if let geo = document.get("geolocation") as? [Double] {
                                 let redAnnot = MKPointAnnotation()
