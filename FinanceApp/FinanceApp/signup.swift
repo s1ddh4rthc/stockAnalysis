@@ -107,7 +107,7 @@ class signup: UIViewController, UITextFieldDelegate {
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
-                Database.database().reference().child("user").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
+                Database.database().reference().child("users").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
                     if let error = error {
                         print ("Failed to update database value with errors: ", error.localizedDescription)
                         
@@ -127,7 +127,7 @@ class signup: UIViewController, UITextFieldDelegate {
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
-                Database.database().reference().child("user").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
+                Database.database().reference().child("users").child(uid).updateChildValues(values,withCompletionBlock: {(error, ref) in
                     if let error = error {
                         print ("Failed to update database value with errors: ", error.localizedDescription)
                         
