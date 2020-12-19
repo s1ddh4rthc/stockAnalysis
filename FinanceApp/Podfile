@@ -14,6 +14,8 @@ target 'FinanceApp' do
   pod 'Firebase/Auth'
   pod 'Charts'
   pod 'FirebaseUI'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   
   target 'FinanceAppTests' do
