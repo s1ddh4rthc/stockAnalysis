@@ -56,14 +56,14 @@ class signup: UIViewController, UITextFieldDelegate {
             }
             
         }
-        guard let emailLolz = email.text as? String else { return };
+        guard let emailLolz = usernameTextField.text as? String else { return };
         
         if posPicker.selectedSegmentIndex == 0 {
             
             var values = ["email": emailLolz, "type": "volunteer"
                 
                 
-                ]] as [String : Any]
+            ] as [String : Any]
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
@@ -83,7 +83,7 @@ class signup: UIViewController, UITextFieldDelegate {
             var values = ["email": emailLolz, "type": "employee"
                 
                 
-                ]] as [String : Any]
+                ] as [String : Any]
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
@@ -104,7 +104,7 @@ class signup: UIViewController, UITextFieldDelegate {
             var values = ["email": emailLolz, "type": "employer"
                 
                 
-                ]] as [String : Any]
+            ] as [String : Any]
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
@@ -124,7 +124,7 @@ class signup: UIViewController, UITextFieldDelegate {
             var values = ["email": emailLolz, "type": "bank"
                 
                 
-                ]] as [String : Any]
+            ] as [String : Any]
             var user = Auth.auth().currentUser
             if let user = user {
                 let uid = user.uid
