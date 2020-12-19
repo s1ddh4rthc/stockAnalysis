@@ -59,13 +59,6 @@
                                     <constraint firstAttribute="width" constant="414" id="MgS-aa-Pnp"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYS-FY-rXS">
-                                <rect key="frame" x="173" y="741" width="69" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu1-kq-CnT">
                                 <rect key="frame" x="70" y="359" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -110,8 +103,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-lS-Abk">
-                                <rect key="frame" x="173" y="736" width="69" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-lS-Abk">
+                                <rect key="frame" x="173" y="733" width="69" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="6YP-9d-eFx"/>
                                     <constraint firstAttribute="height" constant="36" id="tao-Gz-Flh"/>
@@ -122,7 +115,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="J2c-M4-B6a" eventType="touchUpInside" id="91M-Hv-497"/>
-                                    <segue destination="wGh-hi-3f0" kind="show" id="9He-iw-t0V"/>
+                                    <segue destination="wGh-hi-3f0" kind="show" identifier="registrationDone" id="9He-iw-t0V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,12 +138,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FUK-aF-wTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918.84057971014499" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1665" y="1096"/>
         </scene>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="qhH-7C-471">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="HfU-CG-qYe" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="HfU-CG-qYe" customClass="login" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tp2-N4-uI2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,6 +188,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fth-O2-ApE">
+                                <rect key="frame" x="89" y="725" width="238" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=" "/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="HfU-CG-qYe" eventType="touchUpInside" id="zjF-jz-dc5"/>
+                                    <segue destination="wGh-hi-3f0" kind="show" identifier="loginSegue" id="klB-Ee-nFp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8cV-dN-OJB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -203,10 +205,14 @@
                             <constraint firstItem="bJC-HL-vZe" firstAttribute="centerY" secondItem="8cV-dN-OJB" secondAttribute="centerY" id="LxO-qm-Q9J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="EP7-dX-KDe" id="nSc-BL-Qgf"/>
+                        <outlet property="usernameTextField" destination="6uf-oG-XQt" id="b5m-6f-p85"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UxQ-yp-Fgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1587" y="88"/>
+            <point key="canvasLocation" x="1019" y="118"/>
         </scene>
         <!--Marketplace-->
         <scene sceneID="RoQ-8L-OhR">
@@ -242,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TsB-wf-5rF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8843" y="106"/>
+            <point key="canvasLocation" x="4122" y="-945"/>
         </scene>
         <!--Profile-->
         <scene sceneID="M3g-WH-gUl">
@@ -384,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzx-6U-rSH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5231.884057971015" y="97.767857142857139"/>
+            <point key="canvasLocation" x="2912" y="757"/>
         </scene>
         <!--Apply-->
         <scene sceneID="Td7-Er-Zxy">
@@ -461,7 +467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWX-UH-scN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5940.579710144928" y="97.767857142857139"/>
+            <point key="canvasLocation" x="2912" y="-615"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="Hht-pa-0wD">
@@ -599,7 +605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spI-sW-6EF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5199" y="811"/>
+            <point key="canvasLocation" x="2912" y="1411"/>
         </scene>
         <!--My Skills-->
         <scene sceneID="Hul-gB-8OU">
@@ -641,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9G-in-kbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5958" y="811"/>
+            <point key="canvasLocation" x="2912" y="-1270"/>
         </scene>
         <!--Add Skills-->
         <scene sceneID="eB0-6q-S0A">
@@ -750,7 +756,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyV-7X-EDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5940.579710144928" y="1465.8482142857142"/>
+            <point key="canvasLocation" x="2912" y="-1935"/>
         </scene>
         <!--Employ-->
         <scene sceneID="xD8-gp-346">
@@ -824,7 +830,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aca-vB-tQY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6663.7681159420299" y="97.767857142857139"/>
+            <point key="canvasLocation" x="4122" y="88"/>
         </scene>
         <!--Job Post-->
         <scene sceneID="fvw-q9-zvF">
@@ -946,7 +952,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJc-kZ-YCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7315.9420289855079" y="97.767857142857139"/>
+            <point key="canvasLocation" x="4862" y="88"/>
         </scene>
         <!--Loans-->
         <scene sceneID="Tbi-Mv-YO8">
@@ -1001,6 +1007,14 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgb-DE-yb3">
+                                <rect key="frame" x="85" y="709" width="237" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Calculate Best Loan">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cln-WD-5ay"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1013,7 +1027,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXZ-82-2Bq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8005.7971014492759" y="105.80357142857143"/>
+            <point key="canvasLocation" x="4121.739130434783" y="1046.6517857142858"/>
+        </scene>
+        <!--Best Loan-->
+        <scene sceneID="fti-VK-Wlf">
+            <objects>
+                <viewController id="7Gv-aW-tVs" customClass="bestLoan" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nfA-MG-TUi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 7.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hef-q6-sdZ">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="11v-Fn-6eU"/>
+                                    <constraint firstAttribute="height" constant="896" id="dxY-rb-M4L"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calculate Best Loan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-9N-F3x">
+                                <rect key="frame" x="46" y="105" width="236" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loan Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU4-Qh-F3l">
+                                <rect key="frame" x="43" y="191" width="99" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desired Interest Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHe-7v-Nr1">
+                                <rect key="frame" x="43" y="270" width="155" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KA-RM-5xE">
+                                <rect key="frame" x="43" y="342" width="65" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzj-n7-nfi">
+                                <rect key="frame" x="41" y="221" width="314" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b31-zj-wIw">
+                                <rect key="frame" x="41" y="300" width="314" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rn5-db-shA">
+                                <rect key="frame" x="41" y="369" width="314" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much do you stress security of a bank?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DM-j7-sjz">
+                                <rect key="frame" x="43" y="418" width="323" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gQ-SV-zUc">
+                                <rect key="frame" x="41" y="445" width="314" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1DJ-xU-QiN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hef-q6-sdZ" firstAttribute="centerY" secondItem="1DJ-xU-QiN" secondAttribute="centerY" id="ALS-gw-6K4"/>
+                            <constraint firstItem="Hef-q6-sdZ" firstAttribute="centerX" secondItem="1DJ-xU-QiN" secondAttribute="centerX" id="p1s-oH-Vm9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="duration" destination="rn5-db-shA" id="WSg-gx-Y9f"/>
+                        <outlet property="interestRate" destination="b31-zj-wIw" id="C83-eT-EY9"/>
+                        <outlet property="loanAmount" destination="Mzj-n7-nfi" id="j4l-2b-FAu"/>
+                        <outlet property="security" destination="5gQ-SV-zUc" id="R8i-T6-u7D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nME-iP-nq2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4791" y="1047"/>
         </scene>
         <!--Home-->
         <scene sceneID="LaD-BK-h5b">
@@ -1030,7 +1137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c19-BO-zeC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4579.7101449275369" y="98.4375"/>
+            <point key="canvasLocation" x="2912" y="88"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yi9-ss-jtE">
@@ -1055,11 +1162,11 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPN-8q-d8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3669.5652173913045" y="98.4375"/>
+            <point key="canvasLocation" x="2251" y="88"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9He-iw-t0V"/>
+        <segue reference="klB-Ee-nFp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>

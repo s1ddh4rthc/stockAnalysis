@@ -139,6 +139,7 @@ class signup: UIViewController, UITextFieldDelegate {
             }
             
         }
+        self.performSegue(withIdentifier: "registrationDone", sender: self)
     }
    
 
@@ -296,5 +297,16 @@ class addSkills: UIViewController, UITextFieldDelegate {
         
             
         }
+    }
+}
+class bestLoan: UIViewController {
+    
+    @IBOutlet var loanAmount: UITextField!
+    @IBOutlet var interestRate: UITextField!
+    
+    @IBOutlet var duration: UITextField!
+    @IBOutlet var security: UITextField!
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }
