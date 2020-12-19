@@ -174,25 +174,25 @@ class myProfile: UIViewController {
         var o = 0
          if let user = user {
             let ref = Database.database().reference()
-            let code = user?.uid
+            let code = user.uid
 
-            ref.child("users/" + String(code!) + "/address").observeSingleEvent(of: .value) { (snapshot) in
+            ref.child("users/" + String(code) + "/address").observeSingleEvent(of: .value) { (snapshot) in
                 guard let goalsCurrent = snapshot.value as? String else { return }
                 self.address.text = String(goalsCurrent)
             }
-            ref.child("users/" + String(code!) + "/city").observeSingleEvent(of: .value) { (snapshot) in
+            ref.child("users/" + String(code) + "/city").observeSingleEvent(of: .value) { (snapshot) in
                 guard let goalsCurrent = snapshot.value as? String else { return }
                 self.city.text = String(goalsCurrent)
             }
-            ref.child("users/" + String(code!) + "/state").observeSingleEvent(of: .value) { (snapshot) in
+            ref.child("users/" + String(code) + "/state").observeSingleEvent(of: .value) { (snapshot) in
                 guard let goalsCurrent = snapshot.value as? String else { return }
                 self.state.text = String(goalsCurrent)
             }
-            ref.child("users/" + String(code!) + "/collegeAttended").observeSingleEvent(of: .value) { (snapshot) in
+            ref.child("users/" + String(code) + "/collegeAttended").observeSingleEvent(of: .value) { (snapshot) in
                 guard let goalsCurrent = snapshot.value as? String else { return }
                 self.attended.text = String(goalsCurrent)
             }
-            ref.child("users/" + String(code!) + "/degree").observeSingleEvent(of: .value) { (snapshot) in
+            ref.child("users/" + String(code) + "/degree").observeSingleEvent(of: .value) { (snapshot) in
                 guard let goalsCurrent = snapshot.value as? String else { return }
                 self.degree.text = String(goalsCurrent)
             }
@@ -275,10 +275,10 @@ class addSkills: UIViewController, UITextFieldDelegate {
             
             let postObject = [
                 
-                "skill": post,
-                "from": necSkills,
-                "mastery": emplyName,
-                "experience": jobLocate,
+                "skill": skillName,
+                "from": whereFrom,
+                "mastery": masteryLevel,
+                "experience": levelExperience,
                 "timestamp": [".sv": "timestamp"]
                 
                 ] as [String: Any]
