@@ -16,6 +16,7 @@
 		5621F092258D788000F6460A /* FinanceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621F091258D788000F6460A /* FinanceAppTests.swift */; };
 		5621F09D258D788100F6460A /* FinanceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621F09C258D788100F6460A /* FinanceAppUITests.swift */; };
 		5621F0D3258D7BBB00F6460A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5621F0D2258D7BBB00F6460A /* GoogleService-Info.plist */; };
+		564F4C7C258DA38300098256 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F4C7B258DA38300098256 /* DatabaseManager.swift */; };
 		7C454035FDA53BD4FB79EEE1 /* Pods_FinanceAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2CE1992ABAEFAA71DD9471 /* Pods_FinanceAppTests.framework */; };
 		A81A56FC258D85FC00A7F63C /* iPhone 11 Pro.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A56FB258D85FC00A7F63C /* iPhone 11 Pro.png */; };
 		A81A5701258D866000A7F63C /* iPhone 11 Copy 4.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A5700258D866000A7F63C /* iPhone 11 Copy 4.png */; };
@@ -79,6 +80,7 @@
 		5621F09C258D788100F6460A /* FinanceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceAppUITests.swift; sourceTree = "<group>"; };
 		5621F09E258D788100F6460A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5621F0D2258D7BBB00F6460A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		564F4C7B258DA38300098256 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		5F7177144696C4A1D37B1691 /* Pods-FinanceAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FinanceAppTests/Pods-FinanceAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6812DDD81433C4FC8B70A782 /* Pods_FinanceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2CE1992ABAEFAA71DD9471 /* Pods_FinanceAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,7 @@
 				5621F080258D787D00F6460A /* Main.storyboard */,
 				A81A570A258D876A00A7F63C /* homepage.swift */,
 				A81A570F258D878200A7F63C /* signup.swift */,
+				564F4C7B258DA38300098256 /* DatabaseManager.swift */,
 				A81A5705258D874F00A7F63C /* login.swift */,
 				A81A5714258D879300A7F63C /* map.swift */,
 				A81A5719258D87AD00A7F63C /* crowdSourcePost.swift */,
@@ -517,6 +520,7 @@
 				A81A5724258D87D900A7F63C /* crowdPostingView.swift in Sources */,
 				A81A571A258D87AD00A7F63C /* crowdSourcePost.swift in Sources */,
 				A81A5706258D874F00A7F63C /* login.swift in Sources */,
+				564F4C7C258DA38300098256 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
