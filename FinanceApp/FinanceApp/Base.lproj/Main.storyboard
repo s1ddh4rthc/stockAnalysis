@@ -878,8 +878,12 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0c-Qr-cPV">
-                                <rect key="frame" x="90" y="711" width="234" height="50"/>
+                                <rect key="frame" x="90" y="660" width="234" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Add New Listing">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="QY1-Um-Ch4" kind="show" id="fte-lT-osM"/>
                                 </connections>
@@ -1102,7 +1106,7 @@
         <!--Best Loan-->
         <scene sceneID="fti-VK-Wlf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="7Gv-aW-tVs" customClass="bestLoan" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="7Gv-aW-tVs" customClass="bestLoan" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfA-MG-TUi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1239,7 +1243,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Xpe-Gh-4lh"/>
-        <segue reference="nsZ-uV-gV6"/>
+        <segue reference="mxa-ee-FpE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="STONKS.png" width="375" height="375"/>

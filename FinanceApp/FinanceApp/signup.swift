@@ -246,8 +246,43 @@ class editProfile: UIViewController, UITextFieldDelegate {
 }
 class mySkills: UIViewController {
     
+    var skills = [String]()
+    var froms = [String]()
+    var masterys = [String]()
+    var experiences = [String]()
+    
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        let postsRef = Database.database().reference().child("users/"+Auth.auth().currentUser.uid + "/skills")
+        postsRef.observe(.value) { (snapshot) in
+            
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String: Any],
+                    
+                    let skill = dict["skill"] as? String,
+                    let from = dict["from"] as? String,
+                    let mastery = dict["mastery"] as? String,
+                    
+                    let experience = dict["experience"] as? String {
+                   
+                    
+                    
+    
+                    self.skills.append(String(skill)!)
+                    self.froms.append(String(from)!)
+                    self.masterys.append(String(mastery)!)
+                    self.experiences.append(String(experience)!)
+                    
+    
+                }
+            }
+        }
+
+
     }
 }
 class addSkills: UIViewController, UITextFieldDelegate {
