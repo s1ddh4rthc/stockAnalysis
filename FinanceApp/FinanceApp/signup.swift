@@ -257,24 +257,27 @@ class addSkills: UIViewController, UITextFieldDelegate {
     @IBOutlet var experience: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let skillName = jobTitle.text as? String else { return }
-        guard let whereFrom = employerName.text as? String else { return }
-        guard let masteryLevel = necessarySkills.text as? String else { return }
-        guard let levelExperience = jobLocation.text as? String else { return }
+        
+    }
+    @IBAction func addSkill(_ sender: Any) {
+        
+        guard let skillName = name.text as? String else { return }
+        guard let whereFrom = from.text as? String else { return }
+        guard let masteryLevel = mastery.text as? String else { return }
+        guard let levelExperience = experience.text as? String else { return }
         let user = Auth.auth().currentUser
         guard let uid =  (user?.uid)! as? String else { return }
         if let user = user {
             let uid = user.uid
-            let postRef = Database.database().reference().child("users/" + (uid) + "/posts").childByAutoId()
-            let postRef1 = Database.database().reference().child("jobPosts").childByAutoId()
+            let postRef = Database.database().reference().child("users/" + (uid) + "/skills").childByAutoId()
+            
             
             let postObject = [
                 
-                "title": post,
-                "skills": necSkills,
-                "name": emplyName,
-                "location": jobLocate,
-                "other": otherStuffZ,
+                "skill": post,
+                "from": necSkills,
+                "mastery": emplyName,
+                "experience": jobLocate,
                 "timestamp": [".sv": "timestamp"]
                 
                 ] as [String: Any]
@@ -287,14 +290,6 @@ class addSkills: UIViewController, UITextFieldDelegate {
                 }
             
           
-        }
-            postRef1.setValue(postObject) { (error, ref) in
-                if error == nil {
-                    self.dismiss(animated: true, completion: nil)
-                } else {
-                    print ("Error", error?.localizedDescription)
-                }
-            
         }
         
         
