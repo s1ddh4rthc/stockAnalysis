@@ -491,6 +491,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jobTitleText" destination="vYM-wf-DC4" id="zSr-7b-bVE"/>
+                                            <outlet property="locationText" destination="9f8-Z3-xQm" id="qSa-6w-9tg"/>
+                                            <outlet property="nameText" destination="tki-rI-HCd" id="Ln7-tq-I7a"/>
+                                            <outlet property="requirementText" destination="wcE-NZ-dQy" id="xl1-yg-h0q"/>
+                                            <outlet property="skillText" destination="Jta-uA-Rhx" id="eqO-lG-hfm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

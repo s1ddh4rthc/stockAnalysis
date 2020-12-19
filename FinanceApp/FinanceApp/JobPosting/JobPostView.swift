@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+import FirebaseDatabase
 
 class JobPostView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -21,6 +24,12 @@ class JobPostView: UIViewController, UITableViewDataSource, UITableViewDelegate 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+                tableView.dataSource = self
+            self.tableView.reloadData()
+                
+
         let postsRef = Database.database().reference().child("jobPosts")
         postsRef.observe(.value) { (snapshot) in
             
@@ -35,20 +44,22 @@ class JobPostView: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     let title = dict["title"] as? String {
                    
                     
+                    print(location)
+                    print(name)
                     
     
-                    self.locations.append(String(location)!)
-                    self.names.append(String(name)!)
-                    self.others.append(String(other)!)
-                    self.skillss.append(String(skills)!)
-                    self.titles.append(String(title)!)
+                    self.locations.append(String(location))
+                    self.names.append(String(name))
+                    self.others.append(String(other))
+                    self.skillss.append(String(skills))
+                    self.titles.append(String(title))
                     
-    
+                    self.tableView.reloadData()
                 }
+                
             }
+            
         }
-
-
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
@@ -58,30 +69,28 @@ class JobPostView: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "JobPost") as? AvailableRestTableViewCell
+            //let cell = tableView.dequeueReusableCell(withIdentifier: "JobPost") as! jobPostingView
+            let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! jobPostingView
+
             
             let useLocation = locations[indexPath.row]
             let useName = names[indexPath.row]
             let useOther = others[indexPath.row]
             let useTitle = titles[indexPath.row]
             let useSkills = skillss[indexPath.row]
-            cell.jobTitleText = useTitle
-            cell.nameText = useName
-            cell.locationText = useLocation
-            cell.skillText = useSkills
-            cell.requirementText = useOther
+            cell.jobTitleText.text = useTitle
+            cell.nameText.text = useName
+            cell.locationText.text = useLocation
+            cell.skillText.text = useSkills
+            cell.requirementText.text = useOther
 
-                    
-            return cell!
+                
+            print(useLocation)
+            print(useOther)
+            return cell
             
         }
         
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            
-            return 65
-            
-        }
-    
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "JobPost", for: indexPath) as! jobPostingView
 //        let useLocation = locations[indexPath.row]
@@ -107,7 +116,7 @@ class viewMyJobPosts: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let postsRef = Database.database().reference().child("users/"+Auth.auth().currentUser.uid + "/posts")
+        let postsRef = Database.database().reference().child("users/"+Auth.auth().currentUser!.uid + "/posts")
         postsRef.observe(.value) { (snapshot) in
             
             for child in snapshot.children {
@@ -123,12 +132,12 @@ class viewMyJobPosts: UIViewController {
                     
                     
     
-                    self.locations.append(String(location)!)
-                    self.names.append(String(name)!)
-                    self.others.append(String(other)!)
-                    self.skillss.append(String(skills)!)
-                    self.titles.append(String(title)!)
-                    
+                    self.locations.append((location))
+                    self.names.append((name))
+                    self.others.append((other))
+                    self.skillss.append((skills))
+                    self.titles.append((title))
+                
     
                 }
             }

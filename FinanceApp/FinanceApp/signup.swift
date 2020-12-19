@@ -256,7 +256,7 @@ class mySkills: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let postsRef = Database.database().reference().child("users/"+Auth.auth().currentUser.uid + "/skills")
+        let postsRef = Database.database().reference().child("users/"+Auth.auth().currentUser!.uid + "/skills")
         postsRef.observe(.value) { (snapshot) in
             
             for child in snapshot.children {
@@ -272,10 +272,10 @@ class mySkills: UIViewController {
                     
                     
     
-                    self.skills.append(String(skill)!)
-                    self.froms.append(String(from)!)
-                    self.masterys.append(String(mastery)!)
-                    self.experiences.append(String(experience)!)
+                    self.skills.append((skill))
+                    self.froms.append((from))
+                    self.masterys.append((mastery))
+                    self.experiences.append((experience))
                     
     
                 }
