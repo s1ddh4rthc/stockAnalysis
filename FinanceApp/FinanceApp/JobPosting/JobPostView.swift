@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JobPostView: UIViewController {
+class JobPostView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var locations = [String]()
     var names = [String]()
@@ -15,6 +15,7 @@ class JobPostView: UIViewController {
     var skillss = [String]()
     var titles = [String]()
     
+    @IBOutlet var tableView: UITableView!
     
     
 
@@ -49,6 +50,47 @@ class JobPostView: UIViewController {
 
 
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            
+            return locations.count
+            
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "JobPost") as? AvailableRestTableViewCell
+            
+            let useLocation = locations[indexPath.row]
+            let useName = names[indexPath.row]
+            let useOther = others[indexPath.row]
+            let useTitle = titles[indexPath.row]
+            let useSkills = skillss[indexPath.row]
+            cell.jobTitleText = useTitle
+            cell.nameText = useName
+            cell.locationText = useLocation
+            cell.skillText = useSkills
+            cell.requirementText = useOther
+
+                    
+            return cell!
+            
+        }
+        
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            
+            return 65
+            
+        }
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "JobPost", for: indexPath) as! jobPostingView
+//        let useLocation = locations[indexPath.row]
+//        let useName = names[indexPath.row]
+//        let useOther = others[indexPath.row]
+//        let useTitle = titles[indexPath.row]
+//        let useSkills = skillss[indexPath.row]
+//    }
+    
 
 
 }
@@ -94,4 +136,14 @@ class viewMyJobPosts: UIViewController {
 
 
     }
+}
+class jobPostingView: UITableViewCell {
+    
+    @IBOutlet weak var jobTitleText: UILabel!
+    @IBOutlet weak var nameText: UILabel!
+    @IBOutlet weak var locationText: UILabel!
+    @IBOutlet weak var skillText: UILabel!
+    @IBOutlet weak var requirementText: UILabel!
+    
+    
 }
