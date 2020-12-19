@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="107" y="89"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup-->
         <scene sceneID="x2r-64-spK">
             <objects>
-                <viewController id="J2c-M4-B6a" sceneMemberID="viewController">
+                <viewController id="J2c-M4-B6a" customClass="signup" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Obn-Vz-Bjt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,6 +110,9 @@
                             <constraint firstItem="dS9-Vk-Xij" firstAttribute="centerX" secondItem="jUA-eh-qk6" secondAttribute="centerX" id="uVP-X0-nWi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="posPicker" destination="rhg-iu-bLy" id="a86-7G-e33"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FUK-aF-wTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
