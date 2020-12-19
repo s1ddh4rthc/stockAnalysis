@@ -58,62 +58,76 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         db.collection("hospitals")
             .getDocuments() {
                 (QuerySnapshot, Error) in
-                for document in QuerySnapshot!.documents {
-                    //green hospital
-                    if let status = document.get("status") as? String {
-                        if status == "secure" {
-                            self.green = true
-                            if let geo = document.get("geolocation") as? [Double] {
-                                let greenHosp = MKPointAnnotation()
-                                greenHosp.title =  document.get("name") as? String
-                                greenHosp.subtitle = "Vaccine has been delivered."
-                                greenHosp.coordinate = CLLocationCoordinate2D(latitude: geo[0], longitude: geo[1])
-                                self.mapView.addAnnotation(greenHosp)
-                                let grnCir: MKCircle = MKCircle(center: greenHosp.coordinate, radius: 100)
-                                circlesDisplay.append(grnCir)
-                                self.mapView.addOverlay(grnCir)
+                
+                if let err = Error {
+                    print("Didn't work")
+                    return
+                }
+                
+                else {
+                    for document in QuerySnapshot!.documents {
+                        //green hospital
+                        if let status = document.get("status") as? String {
+                            if status == "secure" {
+                                self.green = true
+                                if let geo = document.get("geolocation") as? [Double] {
+                                    let greenHosp = MKPointAnnotation()
+                                    greenHosp.title =  document.get("name") as? String
+                                    greenHosp.subtitle = "Vaccine has been delivered."
+                                    greenHosp.coordinate = CLLocationCoordinate2D(latitude: geo[0], longitude: geo[1])
+                                    self.mapView.addAnnotation(greenHosp)
+                                    let grnCir: MKCircle = MKCircle(center: greenHosp.coordinate, radius: 100)
+                                    circlesDisplay.append(grnCir)
+                                    self.mapView.addOverlay(grnCir)
+                                }
                             }
-                        }
-                        
-                        //yellow hospital
-                        if status == "transit" {
-                            self.yellow = true
-                            if let geo = document.get("geolocation") as? [Double] {
-                                let yellowHosp = MKPointAnnotation()
-                                yellowHosp.title =  document.get("name") as? String
-                                yellowHosp.subtitle = "Vaccine is in transit."
-                                yellowHosp.coordinate = CLLocationCoordinate2D(latitude: geo[0], longitude: geo[1])
-                                self.mapView.addAnnotation(yellowHosp)
-                                let ylwCir: MKCircle = MKCircle(center: yellowHosp.coordinate, radius: 100)
-                                circlesDisplay.append(ylwCir)
-                                self.mapView.addOverlay(ylwCir)
+                            
+                            //yellow hospital
+                            if status == "transit" {
+                                self.yellow = true
+                                if let geo = document.get("geolocation") as? [Double] {
+                                    let yellowHosp = MKPointAnnotation()
+                                    yellowHosp.title =  document.get("name") as? String
+                                    yellowHosp.subtitle = "Vaccine is in transit."
+                                    yellowHosp.coordinate = CLLocationCoordinate2D(latitude: geo[0], longitude: geo[1])
+                                    self.mapView.addAnnotation(yellowHosp)
+                                    let ylwCir: MKCircle = MKCircle(center: yellowHosp.coordinate, radius: 100)
+                                    circlesDisplay.append(ylwCir)
+                                    self.mapView.addOverlay(ylwCir)
+                                }
                             }
-                        }
-                        
-                        if status == "offer" {
-                            self.red = true
-                            if let geo = document.get("geolocation") as? [Double] {
-                                let redHosp = MKPointAnnotation()
-                                redHosp.title =  document.get("name") as? String
-                                redHosp.subtitle = "Food to offer but needs driver sign-up."
-                                redHosp.coordinate = CLLocationCoordinate2D(latitude: geo[0], longitude: geo[1])
-                                self.mapView.addAnnotation(redHosp)
-                                let redCir: MKCircle = MKCircle(center: redHosp.coordinate, radius: 100)
-                                self.mapView.addOverlay(redCir)
-                                circlesDisplay.append(redCir)
-                                
+                            
+                            if status == "offer" {
+                                self.red = true
+                                if let geo = document.get("geolocation") as? [Double] {
+                                    let redHosp = MKPointAnnotation()
+                                    redHosp.title =  document.get("name") as? String
+                                    redHosp.subtitle = "Vaccine needed."
+                                    redHosp.coordinate = CLLocationCoordinate2D(latitude: geo[0], longitude: geo[1])
+                                    self.mapView.addAnnotation(redHosp)
+                                    let redCir: MKCircle = MKCircle(center: redHosp.coordinate, radius: 100)
+                                    self.mapView.addOverlay(redCir)
+                                    circlesDisplay.append(redCir)
+                                    
+                                }
                             }
                         }
                     }
                 }
+                
             }
         
         db.collection("distribution-centers")
             .getDocuments() {
                 (QuerySnapshot, Error) in
                 
+                if let err = Error {
+                    print("Didn't work")
+                    return
+                } else {
+                    
                 for document in QuerySnapshot!.documents {
-                    if let status = document.get("status") as? String {
+                if let status = document.get("status") as? String {
                         print(status)
                         // green points
                         if status == "delivered" {
@@ -122,7 +136,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                             if let geo = document.get("geolocation") as? [Double] {
                                 let greenAnnot = MKPointAnnotation()
                                 greenAnnot.title = document.get("name") as? String
-                                greenAnnot.subtitle = "Food has been delivered."
+                                greenAnnot.subtitle = "Vaccine has been delivered."
                                 greenAnnot.coordinate = CLLocationCoordinate2D(latitude: geo[0], longitude: geo[1])
                                 self.mapView.addAnnotation(greenAnnot)
                                 let grnCir = MKCircle(center: greenAnnot.coordinate, radius: 100)
@@ -130,7 +144,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                                 circlesDisplay.append(grnCir)
                             }
                         }
-                        
+
                         //yellow points
                         if status == "transit" {
                             print("im in transit")
@@ -138,7 +152,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                             if let geo = document.get("geolocation") as? [Double] {
                                 let yellowAnnot = MKPointAnnotation()
                                 yellowAnnot.title = document.get("name") as? String
-                                yellowAnnot.subtitle = "Food is in transit."
+                                yellowAnnot.subtitle = "Vaccine is in transit."
                                 yellowAnnot.coordinate = CLLocationCoordinate2D(latitude: geo[0], longitude: geo[1])
                                 self.mapView.addAnnotation(yellowAnnot)
                                 let ylwCir: MKCircle = MKCircle(center: yellowAnnot.coordinate, radius: 100)
@@ -146,31 +160,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                                 circlesDisplay.append(ylwCir)
                             }
                         }
-                        
+
                         //red points
                         if status == "requested" {
                             self.red = true
                             if let geo = document.get("geolocation") as? [Double] {
                                 let redAnnot = MKPointAnnotation()
                                 redAnnot.title = document.get("name") as? String
-                                redAnnot.subtitle = "Food is in transit."
+                                redAnnot.subtitle = "Vaccine is being packaged."
                                 redAnnot.coordinate = CLLocationCoordinate2D(latitude: geo[0], longitude: geo[1])
                                 self.mapView.addAnnotation(redAnnot)
                                 let redCir: MKCircle = MKCircle(center: redAnnot.coordinate, radius: 100)
                                 self.mapView.addOverlay(redCir)
                                 circlesDisplay.append(redCir)
-                                
+
                             }
                         }
                     }
-                    
-                    
-                    
                 }
-                
+                }
+
                 if (circlesDisplay.count > 0) {
                     self.mapView.region = MKCoordinateRegion(center: circlesDisplay[0].coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
-                    
+
                 }
             }
     }
