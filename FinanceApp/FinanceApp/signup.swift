@@ -159,3 +159,87 @@ class signup: UIViewController, UITextFieldDelegate {
     }
 
 }
+class myProfile: UIViewController {
+    
+    @IBOutlet var address: UILabel!
+    @IBOutlet var city: UILabel!
+    @IBOutlet var state: UILabel!
+    @IBOutlet var attended: UILabel!
+    @IBOutlet var degree: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let user = Auth.auth().currentUser
+        
+        var o = 0
+         if let user = user {
+            let ref = Database.database().reference()
+            let code = user?.uid
+
+            ref.child("users/" + String(code!) + "/address").observeSingleEvent(of: .value) { (snapshot) in
+                guard let goalsCurrent = snapshot.value as? String else { return }
+                self.address.text = String(goalsCurrent)
+            }
+            ref.child("users/" + String(code!) + "/city").observeSingleEvent(of: .value) { (snapshot) in
+                guard let goalsCurrent = snapshot.value as? String else { return }
+                self.city.text = String(goalsCurrent)
+            }
+            ref.child("users/" + String(code!) + "/state").observeSingleEvent(of: .value) { (snapshot) in
+                guard let goalsCurrent = snapshot.value as? String else { return }
+                self.state.text = String(goalsCurrent)
+            }
+            ref.child("users/" + String(code!) + "/collegeAttended").observeSingleEvent(of: .value) { (snapshot) in
+                guard let goalsCurrent = snapshot.value as? String else { return }
+                self.attended.text = String(goalsCurrent)
+            }
+            ref.child("users/" + String(code!) + "/degree").observeSingleEvent(of: .value) { (snapshot) in
+                guard let goalsCurrent = snapshot.value as? String else { return }
+                self.degree.text = String(goalsCurrent)
+            }
+         }
+        
+    }
+    
+}
+class editProfile: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet var address: UITextField!
+    @IBOutlet var city: UITextField!
+    @IBOutlet var state: UITextField!
+    @IBOutlet var attended: UITextField!
+    @IBOutlet var degree: UITextField!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        address.resignFirstResponder()
+        state.resignFirstResponder()
+        attended.resignFirstResponder()
+        city.resignFirstResponder()
+        degree.resignFirstResponder()
+    }
+    @IBAction func finish(_ sender: Any) {
+        let user = Auth.auth().currentUser
+        if let user = user {
+            
+            
+            let uid = user.uid
+            let ref = Database.database().reference()
+            ref.child("users/" + uid + "/address").setValue(address.text)
+            ref.child("users/" + uid + "/city").setValue(city.text)
+            ref.child("users/" + uid + "/state").setValue(state.text)
+            ref.child("users/" + uid + "/collegeAttended").setValue(attended.text)
+            ref.child("users/" + uid + "/degree").setValue(degree.text)
+            
+        }
+        
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        address.resignFirstResponder()
+        state.resignFirstResponder()
+        attended.resignFirstResponder()
+        city.resignFirstResponder()
+        degree.resignFirstResponder()
+        self.view.endEditing(true)
+        return true
+    }
+}
