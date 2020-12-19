@@ -14,6 +14,7 @@ class signup: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet var posPicker: UISegmentedControl!
+    @IBOutlet var registerButton: UIButton!
     
     func errorMessage(title: String, message: String) {
         
@@ -138,12 +139,12 @@ class signup: UIViewController, UITextFieldDelegate {
             }
             
         }
-        
     }
    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
         usernameTextField.resignFirstResponder()
