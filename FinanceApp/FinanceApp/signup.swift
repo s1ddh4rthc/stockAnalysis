@@ -280,9 +280,14 @@ class mySkills: UIViewController,  UITableViewDataSource, UITableViewDelegate {
                     self.froms.append((from))
                     self.masterys.append((mastery))
                     self.experiences.append((experience))
+<<<<<<< HEAD
                     
                     self.tableView.reloadData()
                     
+=======
+                    self.tableView.reloadData()
+
+>>>>>>> d556d10343e198c7ed1c801c37b69ddf1432de03
     
                 }
             }
@@ -309,7 +314,7 @@ class mySkills: UIViewController,  UITableViewDataSource, UITableViewDelegate {
             cell.skillNameText.text = useSkill
             cell.acquiredFromText.text = useAcquired
             cell.experienceText.text = useExperience
-            cell.masteryThing.value = useMastery
+            cell.masteryThing.value = (Float)(useMastery)!
                 
             return cell
             
@@ -387,9 +392,11 @@ class skillPostingView: UITableViewCell {
     @IBOutlet var acquiredFromText: UILabel!
     @IBOutlet var experienceText: UILabel!
     @IBOutlet var masteryThing: UISlider!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
     
     
 }
