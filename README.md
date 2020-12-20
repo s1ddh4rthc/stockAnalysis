@@ -40,7 +40,3 @@ We hope to include additional features like a stock market analysis tool and inc
 Built with:
 We used Swift UI and Xcode to put together our application.
 
-Prizes we're going for:
-Best Finance Hack
-Best Mobile Hack
-Best Use of Google Cloud
