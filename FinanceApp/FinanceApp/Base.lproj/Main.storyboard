@@ -971,6 +971,13 @@
                                                         </label>
                                                     </subviews>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="aprText" destination="7xQ-mY-k5m" id="2de-MW-iaB"/>
+                                                    <outlet property="bankNameText" destination="neN-kz-Jti" id="WSt-Pd-Hhb"/>
+                                                    <outlet property="durationText" destination="wIY-2t-dS0" id="L2O-Kh-9Gx"/>
+                                                    <outlet property="loanAmountText" destination="q1u-7f-KaS" id="abh-zk-0PK"/>
+                                                    <outlet property="securityText" destination="SQY-Dq-ZRS" id="pyB-a4-7zb"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>

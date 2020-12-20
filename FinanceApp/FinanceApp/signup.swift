@@ -311,7 +311,7 @@ class mySkills: UIViewController,  UITableViewDataSource, UITableViewDelegate {
             cell.skillNameText.text = useSkill
             cell.acquiredFromText.text = useAcquired
             cell.experienceText.text = useExperience
-            cell.masteryThing.value = (Float)(useMastery)!
+            cell.masteryThing.value = (Float)(useMastery) ?? 1
                 
             return cell
             
@@ -384,58 +384,56 @@ class bestLoan: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func buttonLol(_ sender: Any) {
+        print("hello")
         guard let amt = loanAmount.text as? String else { return }
         guard let inst = interestRate.text as? String else { return }
         guard let dur = duration.text as? String else { return }
-        guard let secur = security.text as? Int else { return }
-        let bank = ""
+        guard let secur = security.text as? String else { return }
+        var bank = ""
         
-        if (security == 1) {
+        if (secur == "1") {
             bank = "Patelco"
-            let imageName = "132141676_162803565627658_8811870711475981484_n.png"
-            let image = UIImage(named: imageName)
-            imageViewTing = UIImageView(image: image!)
-            imageViewTing.reloadInputViews()
+//            let imageName = "132141676_162803565627658_8811870711475981484_n.png"
+//            let image = UIImage(named: imageName)
+//            imageViewTing = UIImageView(image: image!)
         }
-        if (security == 2) {
+        if (secur == "2") {
             bank = "Citi"
-            let imageName = "132040850_3757896707567154_5245483586342873397_n.png"
-            let image = UIImage(named: imageName)
-            imageViewTing = UIImageView(image: image!)
-            imageViewTing.reloadInputViews()
+//            let imageName = "132040850_3757896707567154_5245483586342873397_n.png"
+//            let image = UIImage(named: imageName)
+//            imageViewTing = UIImageView(image: image!)
         }
-        if (security == 3) {
+        if (secur == "3") {
             bank = "Union Bank"
-            let imageName = "48415080_2302340576669675_5644961811615711232_n.png"
-            let image = UIImage(named: imageName)
-            imageViewTing = UIImageView(image: image!)
-            imageViewTing.reloadInputViews()
+//            let imageName = "48415080_2302340576669675_5644961811615711232_n.png"
+//            let image = UIImage(named: imageName)
+//            imageViewTing = UIImageView(image: image!)
         }
-        if (security == 4) {
+        if (secur == "4") {
             bank = "Chase"
-            let imageName = "132029299_307074283936887_7172416951977058603_n.png"
-            let image = UIImage(named: imageName)
-            imageViewTing = UIImageView(image: image!)
-            imageViewTing.reloadInputViews()
+//            let imageName = "132029299_307074283936887_7172416951977058603_n.png"
+//            let image = UIImage(named: imageName)
+//            imageViewTing = UIImageView(image: image!)
         }
-        if (security == 5) {
+        if (secur == "5") {
             bank = "Bank of America"
-            let imageName = "132042848_411132100035995_7463449053841261681_n.png"
-            let image = UIImage(named: imageName)
-            imageViewTing = UIImageView(image: image!)
-            imageViewTing.reloadInputViews()
+            print(bank)
+//            let imageName = "132042848_411132100035995_7463449053841261681_n.png"
+//            let image = UIImage(named: imageName)
+//            imageViewTing = UIImageView(image: image!)
         } else {
             
             bank = "Bank of America"
-            let imageName = "132042848_411132100035995_7463449053841261681_n.png"
-            let image = UIImage(named: imageName)
-            imageViewTing = UIImageView(image: image!)
-            imageViewTing.reloadInputViews()
+//            let imageName = "132042848_411132100035995_7463449053841261681_n.png"
+//            let image = UIImage(named: imageName)
+//            imageViewTing = UIImageView(image: image!)
             
         }
         
         let user = Auth.auth().currentUser
+        print("hello")
         guard let uid =  (user?.uid)! as? String else { return }
+        print("hello")
         if let user = user {
             let uid = user.uid
             let postRef = Database.database().reference().child("users/" + (uid) + "/loans").childByAutoId()
@@ -479,7 +477,7 @@ class bestLoan: UIViewController {
         }
     }
     
-    
+    }
 }
 class skillPostingView: UITableViewCell {
     
@@ -495,3 +493,5 @@ class skillPostingView: UITableViewCell {
     
     
 }
+
+
