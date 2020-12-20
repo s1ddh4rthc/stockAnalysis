@@ -244,17 +244,21 @@ class editProfile: UIViewController, UITextFieldDelegate {
         return true
     }
 }
-class mySkills: UIViewController {
+class mySkills: UIViewController,  UITableViewDataSource, UITableViewDelegate {
     
     var skills = [String]()
     var froms = [String]()
     var masterys = [String]()
     var experiences = [String]()
+    @IBOutlet var tableView: UITableView!
     
     
     
 
     override func viewDidLoad() {
+        tableView.delegate = self
+                tableView.dataSource = self
+            self.tableView.reloadData()
         super.viewDidLoad()
         let postsRef = Database.database().reference().child("users/"+Auth.auth().currentUser!.uid + "/skills")
         postsRef.observe(.value) { (snapshot) in
@@ -284,6 +288,36 @@ class mySkills: UIViewController {
 
 
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            
+            return skills.count
+            
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+            //let cell = tableView.dequeueReusableCell(withIdentifier: "JobPost") as! jobPostingView
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SkillCell", for: indexPath) as! skillPostingView
+
+            
+            let useSkill = skills[indexPath.row]
+            let useAcquired = froms[indexPath.row]
+            let useExperience = masterys[indexPath.row]
+            let useMastery = experiences[indexPath.row]
+            cell.skillNameText.text = useSkill
+            cell.acquiredFromText.text = useAcquired
+            cell.experienceText.text = useExperience
+            cell.masteryThing.value = useMastery
+                
+            return cell
+            
+        }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            
+            return 135
+            
+        }
 }
 class addSkills: UIViewController, UITextFieldDelegate {
     
@@ -344,4 +378,16 @@ class bestLoan: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+}
+class skillPostingView: UITableViewCell {
+    
+    @IBOutlet var skillNameText: UILabel!
+    @IBOutlet var acquiredFromText: UILabel!
+    @IBOutlet var experienceText: UILabel!
+    @IBOutlet var masteryThing: UISlider!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
 }
