@@ -90,6 +90,13 @@ class JobPostView: UIViewController, UITableViewDataSource, UITableViewDelegate 
             return cell
             
         }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            
+            return 200
+            
+        }
+        
         
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "JobPost", for: indexPath) as! jobPostingView
