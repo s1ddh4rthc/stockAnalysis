@@ -281,6 +281,8 @@ class mySkills: UIViewController,  UITableViewDataSource, UITableViewDelegate {
                     self.masterys.append((mastery))
                     self.experiences.append((experience))
                     
+                    self.tableView.reloadData()
+                    
     
                 }
             }
