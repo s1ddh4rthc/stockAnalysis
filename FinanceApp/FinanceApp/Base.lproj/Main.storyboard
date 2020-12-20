@@ -119,6 +119,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="J2c-M4-B6a" eventType="touchUpInside" id="91M-Hv-497"/>
+                                    <segue destination="0kt-fo-5Le" kind="show" id="kUs-K8-2Za"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -181,6 +182,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="HfU-CG-qYe" eventType="touchUpInside" id="zjF-jz-dc5"/>
+                                    <segue destination="0kt-fo-5Le" kind="show" id="0YX-8m-gWj"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="STONKS.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-MY-cTr">
@@ -206,11 +208,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="SPN-B8-AGb" customClass="MapViewController" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oHT-CS-BjU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 5.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tsm-Ao-DNq">
-                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="8xa-Zq-ozz"/>
                                     <constraint firstAttribute="height" constant="896" id="Rcr-Un-YRk"/>
@@ -243,11 +245,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BwJ-Hw-3of" customClass="myProfile" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VlS-lB-fLA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 6.png" translatesAutoresizingMaskIntoConstraints="NO" id="alE-tc-08k">
-                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="HKu-lO-wUN"/>
                                     <constraint firstAttribute="height" constant="896" id="Mi7-ed-1YT"/>
@@ -385,11 +387,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="Obi-Ch-lZi" customClass="JobPostView" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f8I-XI-rTB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 8.png" translatesAutoresizingMaskIntoConstraints="NO" id="yHI-sR-jzc">
-                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="IbK-1F-UUp"/>
                                     <constraint firstAttribute="height" constant="896" id="MQR-L0-2Yg"/>
@@ -507,11 +509,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="yef-5l-dSy" customClass="editProfile" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7eJ-cV-e31">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 7.png" translatesAutoresizingMaskIntoConstraints="NO" id="va5-KR-s5n">
-                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="896" id="Yld-fR-t0l"/>
                                     <constraint firstAttribute="width" constant="414" id="jJZ-8X-yeb"/>
@@ -645,11 +647,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="Lv8-nn-YcR" customClass="mySkills" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqK-0k-UoD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 8.png" translatesAutoresizingMaskIntoConstraints="NO" id="PuZ-Qi-xJm">
-                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="896" id="9am-cb-LX9"/>
                                     <constraint firstAttribute="width" constant="414" id="D3p-nt-9nl"/>
@@ -726,11 +728,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="hbf-p5-0ZX" customClass="addSkills" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gmO-TT-RG3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 7.png" translatesAutoresizingMaskIntoConstraints="NO" id="ruw-1m-JsM">
-                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="896" id="5oA-2x-P37"/>
                                     <constraint firstAttribute="width" constant="414" id="k2e-RJ-wyV"/>
@@ -844,11 +846,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="ZX0-i4-PPZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWp-N2-e8M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 8.png" translatesAutoresizingMaskIntoConstraints="NO" id="fOK-Wa-gJH">
-                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="Wnn-cj-bOh"/>
                                     <constraint firstAttribute="height" constant="896" id="gkD-Eu-Ybu"/>
@@ -922,7 +924,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="QY1-Um-Ch4" customClass="JobPost" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QeH-WI-yVK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="iPhone 11 Copy 7.png" translatesAutoresizingMaskIntoConstraints="NO" id="uEx-fK-wwm">
@@ -1045,11 +1047,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="K8i-Zs-BcN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Kn-Df-Tsn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 9.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-BQ-lCO">
-                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="5Jj-oa-Kc0"/>
                                     <constraint firstAttribute="height" constant="896" id="UQX-Rc-zAC"/>
@@ -1123,11 +1125,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="7Gv-aW-tVs" customClass="bestLoan" customModule="FinanceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfA-MG-TUi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 11 Copy 7.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hef-q6-sdZ">
-                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="11v-Fn-6eU"/>
                                     <constraint firstAttribute="height" constant="896" id="dxY-rb-M4L"/>
@@ -1217,7 +1219,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="wGh-hi-3f0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="33n-y1-qWj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="STONKS.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ngh-gJ-Dtc">
@@ -1320,8 +1322,9 @@
         <!--Navigation Controller-->
         <scene sceneID="KSn-Qj-yDt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0kt-fo-5Le" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="0kt-fo-5Le" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="oll-rt-XyM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrowtriangle.left.fill" catalog="system" backIndicatorTransitionMaskImage="arrowtriangle.backward.fill" id="5I0-t7-KVk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1347,6 +1350,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="kUs-K8-2Za"/>
         <segue reference="mxa-ee-FpE"/>
     </inferredMetricsTieBreakers>
     <resources>
