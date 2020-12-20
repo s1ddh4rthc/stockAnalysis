@@ -395,36 +395,42 @@ class bestLoan: UIViewController {
             let imageName = "132141676_162803565627658_8811870711475981484_n.png"
             let image = UIImage(named: imageName)
             imageViewTing = UIImageView(image: image!)
+            imageViewTing.reloadInputViews()
         }
         if (security == 2) {
             bank = "Citi"
             let imageName = "132040850_3757896707567154_5245483586342873397_n.png"
             let image = UIImage(named: imageName)
             imageViewTing = UIImageView(image: image!)
+            imageViewTing.reloadInputViews()
         }
         if (security == 3) {
             bank = "Union Bank"
             let imageName = "48415080_2302340576669675_5644961811615711232_n.png"
             let image = UIImage(named: imageName)
             imageViewTing = UIImageView(image: image!)
+            imageViewTing.reloadInputViews()
         }
         if (security == 4) {
             bank = "Chase"
             let imageName = "132029299_307074283936887_7172416951977058603_n.png"
             let image = UIImage(named: imageName)
             imageViewTing = UIImageView(image: image!)
+            imageViewTing.reloadInputViews()
         }
         if (security == 5) {
             bank = "Bank of America"
             let imageName = "132042848_411132100035995_7463449053841261681_n.png"
             let image = UIImage(named: imageName)
             imageViewTing = UIImageView(image: image!)
+            imageViewTing.reloadInputViews()
         } else {
             
             bank = "Bank of America"
             let imageName = "132042848_411132100035995_7463449053841261681_n.png"
             let image = UIImage(named: imageName)
             imageViewTing = UIImageView(image: image!)
+            imageViewTing.reloadInputViews()
             
         }
         
