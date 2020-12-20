@@ -77,10 +77,10 @@ class LoanView: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let useApr = apr[indexPath.row]
             let useSecurity = security[indexPath.row]
             cell.bankNameText.text = useBank
-            cell.durationText.text = useDuration
-            cell.loanAmountText.text = usePrinciple
-            cell.aprText.text = useApr
-            cell.securityText.text = useSecurity
+            cell.durationText.text = "Duration of Loan: " + useDuration
+            cell.loanAmountText.text = "Loan Amount: " + usePrinciple
+            cell.aprText.text = "APR: " + useApr
+            cell.securityText.text = "Emphasis on Security: "+ useSecurity
 
                 
             print(useBank)
@@ -92,7 +92,7 @@ class LoanView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             
-            return 200
+            return 150
             
         }
         
