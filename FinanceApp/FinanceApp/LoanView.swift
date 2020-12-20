@@ -80,7 +80,7 @@ class LoanView: UIViewController, UITableViewDataSource, UITableViewDelegate {
             cell.durationText.text = "Duration of Loan: " + useDuration
             cell.loanAmountText.text = "Loan Amount: " + usePrinciple
             cell.aprText.text = "APR: " + useApr
-            cell.securityText.text = "Emphasis on Security: "+ useSecurity
+            cell.securityText.text = "Emphasis on Security: " + useSecurity
 
                 
             print(useBank)
