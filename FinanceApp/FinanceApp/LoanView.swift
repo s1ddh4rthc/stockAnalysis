@@ -30,7 +30,7 @@ class LoanView: UIViewController, UITableViewDataSource, UITableViewDelegate {
             self.tableView.reloadData()
                 
 
-        let postsRef = Database.database().reference().child("jobPosts")
+        let postsRef = Database.database().reference().child("loans")
         postsRef.observe(.value) { (snapshot) in
             
             for child in snapshot.children {
@@ -68,7 +68,7 @@ class LoanView: UIViewController, UITableViewDataSource, UITableViewDelegate {
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             //let cell = tableView.dequeueReusableCell(withIdentifier: "JobPost") as! jobPostingView
-            let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! loanPostingView
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LoanCell", for: indexPath) as! loanPostingView
 
             
             let useBank = bank[indexPath.row]
@@ -122,7 +122,7 @@ class viewMyLoanPosts: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let postsRef = Database.database().reference().child("users/"+Auth.auth().currentUser!.uid + "/posts")
+        let postsRef = Database.database().reference().child("users/"+Auth.auth().currentUser!.uid + "/loans")
         postsRef.observe(.value) { (snapshot) in
             
             for child in snapshot.children {

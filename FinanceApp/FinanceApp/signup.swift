@@ -280,14 +280,11 @@ class mySkills: UIViewController,  UITableViewDataSource, UITableViewDelegate {
                     self.froms.append((from))
                     self.masterys.append((mastery))
                     self.experiences.append((experience))
-<<<<<<< HEAD
                     
                     self.tableView.reloadData()
                     
-=======
                     self.tableView.reloadData()
 
->>>>>>> d556d10343e198c7ed1c801c37b69ddf1432de03
     
                 }
             }
@@ -382,9 +379,101 @@ class bestLoan: UIViewController {
     
     @IBOutlet var duration: UITextField!
     @IBOutlet var security: UITextField!
+    @IBOutlet var imageViewTing: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func buttonLol(_ sender: Any) {
+        guard let amt = loanAmount.text as? String else { return }
+        guard let inst = interestRate.text as? String else { return }
+        guard let dur = duration.text as? String else { return }
+        guard let secur = security.text as? Int else { return }
+        let bank = ""
+        
+        if (security == 1) {
+            bank = "Patelco"
+            let imageName = "132141676_162803565627658_8811870711475981484_n.png"
+            let image = UIImage(named: imageName)
+            imageViewTing = UIImageView(image: image!)
+        }
+        if (security == 2) {
+            bank = "Citi"
+            let imageName = "132040850_3757896707567154_5245483586342873397_n.png"
+            let image = UIImage(named: imageName)
+            imageViewTing = UIImageView(image: image!)
+        }
+        if (security == 3) {
+            bank = "Union Bank"
+            let imageName = "48415080_2302340576669675_5644961811615711232_n.png"
+            let image = UIImage(named: imageName)
+            imageViewTing = UIImageView(image: image!)
+        }
+        if (security == 4) {
+            bank = "Chase"
+            let imageName = "132029299_307074283936887_7172416951977058603_n.png"
+            let image = UIImage(named: imageName)
+            imageViewTing = UIImageView(image: image!)
+        }
+        if (security == 5) {
+            bank = "Bank of America"
+            let imageName = "132042848_411132100035995_7463449053841261681_n.png"
+            let image = UIImage(named: imageName)
+            imageViewTing = UIImageView(image: image!)
+        } else {
+            
+            bank = "Bank of America"
+            let imageName = "132042848_411132100035995_7463449053841261681_n.png"
+            let image = UIImage(named: imageName)
+            imageViewTing = UIImageView(image: image!)
+            
+        }
+        
+        let user = Auth.auth().currentUser
+        guard let uid =  (user?.uid)! as? String else { return }
+        if let user = user {
+            let uid = user.uid
+            let postRef = Database.database().reference().child("users/" + (uid) + "/loans").childByAutoId()
+            let postRef1 = Database.database().reference().child("loans").childByAutoId()
+            
+//          let bank = dict["bankName"] as? String,
+//          let duration = dict["duration"] as? String,
+//          let principle = dict["loanAmount"] as? String,
+//          let apr = dict["aprRate"] as? String,
+//          let security = dict["security"] as? String {
+            let postObject = [
+                
+                "loanAmount": amt,
+                "aprRate": inst,
+                "duration": dur,
+                "security": secur,
+                "bankName": bank,
+                "timestamp": [".sv": "timestamp"]
+                
+                ] as [String: Any]
+            
+            postRef.setValue(postObject) { (error, ref) in
+                if error == nil {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    print ("Error", error?.localizedDescription)
+                }
+                postRef1.setValue(postObject) { (error, ref) in
+                    if error == nil {
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+                        print ("Error", error?.localizedDescription)
+                    }
+            
+          
+        }
+        
+        
+        
+            
+        }
+    }
+    
+    
 }
 class skillPostingView: UITableViewCell {
     

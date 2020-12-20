@@ -49,6 +49,11 @@
 		A81A5773258D957000A7F63C /* iPhone 11 Copy 8.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A5772258D957000A7F63C /* iPhone 11 Copy 8.png */; };
 		A81A5778258D9D9A00A7F63C /* iPhone 11 Copy 9.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A5777258D9D9A00A7F63C /* iPhone 11 Copy 9.png */; };
 		A81A57AE258E99A900A7F63C /* STONKS.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A57AD258E99A900A7F63C /* STONKS.png */; };
+		A81A57DC258F259E00A7F63C /* 48415080_2302340576669675_5644961811615711232_n.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A57DB258F259D00A7F63C /* 48415080_2302340576669675_5644961811615711232_n.png */; };
+		A81A57E1258F25A600A7F63C /* 132029299_307074283936887_7172416951977058603_n 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A57E0258F25A600A7F63C /* 132029299_307074283936887_7172416951977058603_n 2.png */; };
+		A81A57E3258F25AF00A7F63C /* 132040850_3757896707567154_5245483586342873397_n.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A57E2258F25AF00A7F63C /* 132040850_3757896707567154_5245483586342873397_n.png */; };
+		A81A57E5258F25B500A7F63C /* 132042848_411132100035995_7463449053841261681_n.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A57E4258F25B500A7F63C /* 132042848_411132100035995_7463449053841261681_n.png */; };
+		A81A57EA258F25BC00A7F63C /* 132141676_162803565627658_8811870711475981484_n.png in Resources */ = {isa = PBXBuildFile; fileRef = A81A57E9258F25BC00A7F63C /* 132141676_162803565627658_8811870711475981484_n.png */; };
 		D1937C37F6C6817BB419F46C /* Pods_FinanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6812DDD81433C4FC8B70A782 /* Pods_FinanceApp.framework */; };
 		D44D4EA7FB9CC14FB7F0E4FA /* Pods_FinanceApp_FinanceAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7B382E0DC12D5B59862267 /* Pods_FinanceApp_FinanceAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +127,11 @@
 		A81A5772258D957000A7F63C /* iPhone 11 Copy 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone 11 Copy 8.png"; sourceTree = "<group>"; };
 		A81A5777258D9D9A00A7F63C /* iPhone 11 Copy 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone 11 Copy 9.png"; sourceTree = "<group>"; };
 		A81A57AD258E99A900A7F63C /* STONKS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STONKS.png; sourceTree = "<group>"; };
+		A81A57DB258F259D00A7F63C /* 48415080_2302340576669675_5644961811615711232_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 48415080_2302340576669675_5644961811615711232_n.png; sourceTree = "<group>"; };
+		A81A57E0258F25A600A7F63C /* 132029299_307074283936887_7172416951977058603_n 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "132029299_307074283936887_7172416951977058603_n 2.png"; sourceTree = "<group>"; };
+		A81A57E2258F25AF00A7F63C /* 132040850_3757896707567154_5245483586342873397_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 132040850_3757896707567154_5245483586342873397_n.png; sourceTree = "<group>"; };
+		A81A57E4258F25B500A7F63C /* 132042848_411132100035995_7463449053841261681_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 132042848_411132100035995_7463449053841261681_n.png; sourceTree = "<group>"; };
+		A81A57E9258F25BC00A7F63C /* 132141676_162803565627658_8811870711475981484_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 132141676_162803565627658_8811870711475981484_n.png; sourceTree = "<group>"; };
 		B3200447DC46969E833ED736 /* Pods-FinanceApp-FinanceAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp-FinanceAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FinanceApp-FinanceAppUITests/Pods-FinanceApp-FinanceAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2DB64F9AF24D37DEE459C82 /* Pods-FinanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceApp.debug.xcconfig"; path = "Target Support Files/Pods-FinanceApp/Pods-FinanceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E37605A0ECF770B7D9920808 /* Pods-FinanceAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceAppTests.release.xcconfig"; path = "Target Support Files/Pods-FinanceAppTests/Pods-FinanceAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -304,9 +314,14 @@
 			children = (
 				A81A5760258D8CAF00A7F63C /* iPhone 11 Copy 5.png */,
 				A81A5772258D957000A7F63C /* iPhone 11 Copy 8.png */,
+				A81A57E0258F25A600A7F63C /* 132029299_307074283936887_7172416951977058603_n 2.png */,
+				A81A57DB258F259D00A7F63C /* 48415080_2302340576669675_5644961811615711232_n.png */,
 				A81A576D258D92E000A7F63C /* iPhone 11 Copy 7.png */,
 				A81A57AD258E99A900A7F63C /* STONKS.png */,
+				A81A57E4258F25B500A7F63C /* 132042848_411132100035995_7463449053841261681_n.png */,
 				A81A5700258D866000A7F63C /* iPhone 11 Copy 4.png */,
+				A81A57E9258F25BC00A7F63C /* 132141676_162803565627658_8811870711475981484_n.png */,
+				A81A57E2258F25AF00A7F63C /* 132040850_3757896707567154_5245483586342873397_n.png */,
 				A81A5777258D9D9A00A7F63C /* iPhone 11 Copy 9.png */,
 				A81A5768258D901100A7F63C /* iPhone 11 Copy 6.png */,
 				A81A56FB258D85FC00A7F63C /* iPhone 11 Pro.png */,
@@ -439,16 +454,21 @@
 			files = (
 				5621F087258D788000F6460A /* LaunchScreen.storyboard in Resources */,
 				A81A56FC258D85FC00A7F63C /* iPhone 11 Pro.png in Resources */,
+				A81A57DC258F259E00A7F63C /* 48415080_2302340576669675_5644961811615711232_n.png in Resources */,
+				A81A57EA258F25BC00A7F63C /* 132141676_162803565627658_8811870711475981484_n.png in Resources */,
 				A81A5773258D957000A7F63C /* iPhone 11 Copy 8.png in Resources */,
 				5621F084258D788000F6460A /* Assets.xcassets in Resources */,
 				A81A5778258D9D9A00A7F63C /* iPhone 11 Copy 9.png in Resources */,
 				5621F082258D787D00F6460A /* Main.storyboard in Resources */,
 				A81A5769258D901100A7F63C /* iPhone 11 Copy 6.png in Resources */,
 				A81A57AE258E99A900A7F63C /* STONKS.png in Resources */,
+				A81A57E1258F25A600A7F63C /* 132029299_307074283936887_7172416951977058603_n 2.png in Resources */,
+				A81A57E3258F25AF00A7F63C /* 132040850_3757896707567154_5245483586342873397_n.png in Resources */,
 				A81A5761258D8CAF00A7F63C /* iPhone 11 Copy 5.png in Resources */,
 				56E3CFC5258DF79A00D8F733 /* GoogleService-Info.plist in Resources */,
 				A81A5701258D866000A7F63C /* iPhone 11 Copy 4.png in Resources */,
 				A81A576E258D92E000A7F63C /* iPhone 11 Copy 7.png in Resources */,
+				A81A57E5258F25B500A7F63C /* 132042848_411132100035995_7463449053841261681_n.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
